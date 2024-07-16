@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block head_title %}
+            {% endblock head_title %}
+        </title>
+        <link rel="stylesheet"
+              href="https://unpkg.com/tailwindcss@2.0.1/dist/tailwind.min.css">
+    </head>
+    <body>
+        {% include "nav.html" %}
+        {% include "message.html" %}
+        {% block mainContent %}
+        {% endblock mainContent %}
+        {% include "footer.html" %}
+    </body>
+</html>
